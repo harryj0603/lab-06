@@ -28,7 +28,11 @@ diamonds <- diamonds %>% rename(
 
 ```{r}
 # Do some preliminary investigations & cleaning
+diamonds %>% count(carat, sort = TRUE)
 
+range(diamonds$price)
+
+diamonds %>% ggplot(mapping = aes(x = price)) + geom_histogram()
 
 
 
